@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>協同產品設計實習</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2022-03-31T15:46:16+08:00</updated><entry><title>2020 Fall CP 課程</title><link href="./2020-Fall-Intro-to-computer-programming.html" rel="alternate"></link><published>2020-08-13T11:00:00+08:00</published><updated>2022-03-17T16:10:40+08:00</updated><author><name>yen</name></author><id>tag:None,2020-08-13:./2020-Fall-Intro-to-computer-programming.html</id><summary type="html">&lt;p&gt;2020 Fall 計算機程式的教學主要介紹 Python 與 Flutter 在機械設計流程中的應用.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>協同產品設計實習</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2022-04-14T14:20:14+08:00</updated><entry><title>2020 Fall CP 課程</title><link href="./2020-Fall-Intro-to-computer-programming.html" rel="alternate"></link><published>2020-08-13T11:00:00+08:00</published><updated>2022-03-17T16:10:40+08:00</updated><author><name>yen</name></author><id>tag:None,2020-08-13:./2020-Fall-Intro-to-computer-programming.html</id><summary type="html">&lt;p&gt;2020 Fall 計算機程式的教學主要介紹 Python 與 Flutter 在機械設計流程中的應用.&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2020 Fall 計算機程式的教學主要介紹 Python 與 Flutter 在機械設計流程中的應用.&lt;/p&gt;
 
 
@@ -9,7 +9,30 @@
 &lt;p&gt;Python 可以用來控制 CoppeliaSim 與 Webots 虛擬環境中的機電系統&lt;/p&gt;
 &lt;p&gt;Python 可以用於機器學習 Keras, Pytorch&lt;/p&gt;
 &lt;h2&gt;Flutter&lt;/h2&gt;
-&lt;p&gt;Flutter 可以用來開發跨 Apple 與 Android 手機與平板上的 Apps&lt;/p&gt;</content><category term="Misc"></category><category term="2020FallCP"></category></entry><entry><title>2022 CD 課程</title><link href="./w6_40723136.html" rel="alternate"></link><published>2020-03-31T14:00:00+08:00</published><updated>2022-03-31T15:46:16+08:00</updated><author><name>40723136</name></author><id>tag:None,2020-03-31:./w6_40723136.html</id><summary type="html">&lt;p&gt;2022 Spring 協同產品設計實習&lt;/p&gt;
+&lt;p&gt;Flutter 可以用來開發跨 Apple 與 Android 手機與平板上的 Apps&lt;/p&gt;</content><category term="Misc"></category><category term="2020FallCP"></category></entry><entry><title>2022 CD 課程</title><link href="./w7_summary.html" rel="alternate"></link><published>2020-04-07T15:00:00+08:00</published><updated>2022-04-14T14:20:14+08:00</updated><author><name>40723136</name></author><id>tag:None,2020-04-07:./w7_summary.html</id><summary type="html">&lt;p&gt;2022 Spring 協同產品設計實習&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;2022 Spring 協同產品設計實習&lt;/p&gt;
+
+
+&lt;h2&gt;W7任務&lt;/h2&gt;
+&lt;p&gt;零件步驟
+1.git clone https;//github.com/mdecourse/scarysim.git
+2.修改 scarysim.pro, 蓋掉第 11 行, 成為 # LIBS     += -lglut -lGLU
+3.cd scarysim
+4.qmake -o Makefile scarysim.pro
+5.mingw32-make -f Makefile.Release 可以在 release 目錄取得 scarysim.exe
+6.因為 scarysim.exe 執行需要 base.obj, arm1.obj, arm2.obj, arm3.obj 等零件外型檔案, 以及對應的 .mtl 材質檔案, 因此可將 scarysim.exe 移至倉儲根目錄, 並且需要 msys64_20210419\mingw64\bin 路徑中的 dll 動態連結程式庫配合執行.
+7.由於此套程式碼在 Target 模式下, 零組件間會造成干涉, 表示其 Inverse Kinematic 運算並不正確, 請設法修正此錯誤後, 修改其零件尺寸與操作控制方法, 設法模擬 MTB 的 Pick and Place demo 範例.
+8.請各組指定組員分別利用 Solvespace、NX12、NX1980、NX2008 與 Onshape 繪製 Pick and Place demo 範例所需的零組件, 並完成 Coppeliasim 4.1.0、4.2.0 與 4.3.0 版的 MTB 機械手臂 Pick and Place 模擬, 完成後請說明在使用不同 MCAD 系統與版次的情況下, 該如何執行協同產品設計專案.&lt;/p&gt;
+&lt;p&gt;Blog
+1.各組組員以 Pelican 網誌 (w7_pick_and_place.html) 及 Reveal.js 簡報紀錄個人所完成的內容.
+2.各大組以 Pelican 網誌 (w7_pick_and_place.html) 及 Reveal.js 簡報摘要各大組任務執行結果.
+3.各大組將所有完成的程式碼、編譯結果、MCAD 零組件檔案以及場景模擬檔案壓縮為 .7z (以 2ag1 大分組為例, 檔案名稱設為w7_pap_cd2022ag1.7z) 後, 送到組長的 @gm 帳號下的 OneDrive 共享區, 設定為只有 @gm 帳號登入者可以下載的共用權限後, 將連結發布在大組的 Pelican 網誌中.
+4.各大組以程式方法執行上述任務的量化查驗後, 結合組員自評與互評流程後, 將各組員的評量結果存為 w7_cd2022ag1_evaluation.txt (以 2ag1 為例), 採允許各組組員與 yen@gm 共享下載進行設定&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mde.tw/cd2022_guide/content/w7_summary.html"&gt;參考資料&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Leo的一些指令&lt;/h2&gt;
+&lt;p&gt;.@path '資料夾名' 由當前的目錄再進去到某個指定的資料夾
+.@edit '資料名稱' 在當前的目錄新增一個指定資料&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://mde.tw/cd2022_guide/content/w7_summary.html"&gt;參考資料&lt;/a&gt;&lt;/p&gt;</content><category term="Misc"></category><category term="2022SpringCD"></category></entry><entry><title>2022 CD 課程</title><link href="./w6_40723136.html" rel="alternate"></link><published>2020-03-31T14:00:00+08:00</published><updated>2022-03-31T15:46:16+08:00</updated><author><name>40723136</name></author><id>tag:None,2020-03-31:./w6_40723136.html</id><summary type="html">&lt;p&gt;2022 Spring 協同產品設計實習&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;2022 Spring 協同產品設計實習&lt;/p&gt;
 
 
